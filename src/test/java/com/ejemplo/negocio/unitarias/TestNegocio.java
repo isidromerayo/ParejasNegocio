@@ -1,10 +1,10 @@
 package com.ejemplo.negocio.unitarias;
 
+import static org.junit.Assert.*;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-
-import junit.framework.Assert;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -67,14 +67,14 @@ public class TestNegocio {
 		
 		Persona ideal=sut.encontrarIdeal(usuario);
 		
-		Assert.assertEquals(tieneIdeal,ideal!=null);
+		assertEquals(tieneIdeal,ideal!=null);
 		
 		if(tieneIdeal){
-			Assert.assertEquals(nombreIdeal,ideal.getNombre());
+			assertEquals(nombreIdeal,ideal.getNombre());
 		}
 		
 		List<Persona>afines=sut.encontrarAfines(usuario);
 		
-		Assert.assertEquals(numeroAfines, afines.size());
+		assertEquals(numeroAfines, afines.size());
 	}
 }
